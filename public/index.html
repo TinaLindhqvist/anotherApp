@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+	<!-- w3 css -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+		.mindmap-font {
+			font-family:"Comic Sans MS";
+			font-size: 26px;
+			color: blue;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.png">
+	<title>the Test App</title>
+
+</head>
+
+<body>
+	<div class="w3-container w3-grey">
+		<h1>IBM Cloud Features</h1>
+	</div>
+	<div class="w3-bar w3-black">
+		<button id="tab1" class="w3-bar-item w3-button" onclick="opentestItem('test1')">Overview</button>
+		<button id="tab2" class="w3-bar-item w3-button" onclick="opentestItem('test2')">Architecture</button>
+		<button id="tab3" class="w3-bar-item w3-button" onclick="opentestItem('test3')">Logs
+		</button>
+	</div>
+	<div class="w3-container w3-padding-large">
+		<div id="test1" class="testItem">
+			<!-- First row -->
+			<h2 id="test1header">App information</h2>
+			<p>Version: original </p>
+			<p>Updated from: ?</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="w3-container">
+	<div id="test2" class="testItem" style="display:none">
+		<h2 id="test1header">IBM Cloud Architecture</h2>
+		<p><img src="architecture.png" alt="architecture"></p>
+	</div>
+	</div>
+	<div class="w3-container">
+	<div id="test3" class="testItem" style="display:none">
+		<h2 id="test3header">Logs </h2>
+	<p><img src="diegocell.png" alt="architecture"></p>
+	</div>
+</div>
+</body>
+<script>
+	function opentestItem(testTopic) {
+		var i;
+		var x = document.getElementsByClassName("testItem");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display ="none";
+		}
+		document.getElementById(testTopic).style.display ="block";
+	}
+</script>
+
+</html>
