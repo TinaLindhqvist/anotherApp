@@ -67,7 +67,7 @@ driver.getTitle().then(function(title) {
 			driver.wait(webdriver.until.elementLocated(webdriver.By.id('test1header')), 5000);
 			element = driver.findElement(webdriver.By.id('test1header'));
 			element.getText().then(function(text) {
-				assert.equal(text, 'App information');
+				assert.equal(text, 'Presentation');
 				console.log("Test case 4 [Find and click first tab]\nHeading found - " + text + "\nVerified navigation to first tab\n");
 			});
 		});
