@@ -26,8 +26,7 @@
 	<div class="w3-bar w3-black">
 		<button id="tab1" class="w3-bar-item w3-button" onclick="opentestItem('test1')">Overview</button>
 		<button id="tab2" class="w3-bar-item w3-button" onclick="opentestItem('test2')">Architecture</button>
-		<button id="tab3" class="w3-bar-item w3-button" onclick="opentestItem('test3')">Logs
-		</button>
+		<button id="tab3" class="w3-bar-item w3-button" onclick="opentestItem('test3')">Logs</button>
         <button id="tab4" class="w3-bar-item w3-button" onclick="opentestItem('test4')">Links
 		</button>
 	</div>
@@ -35,8 +34,8 @@
 		<div id="test1" class="testItem">
 			<!-- First row -->
 	<h2 id="test1header">Presentation</h2>
-		<p>Version: 2 </p>
-		<p>Updated from: Atom</p>
+		<p><img alt="resource" src="muralOverview.png"></p>
+		<p>Version: 1</p>
 	</div>
 		</div>
 	</div>
@@ -44,7 +43,19 @@
 	<div class="w3-container">
 	<div id="test2" class="testItem" style="display:none">
 		<h2 id="test2header">IBM Cloud Architecture</h2>
-		<p><img src="architecture.png" alt="architecture"></p>
+		<table style="width:70%">
+		<tr>
+        	<td>
+        	<p>IBM Cloud Platform as a Service (PaaS) is built on Cloud Foundry. Cloud Foundry is an open-source project lead by the Cloud Foundry Foundation.</p>
+        	<p><br><img src="architecture.png" alt="architecture"></p></td>
+        	<td>
+        	<p>The <strong> Router </strong> routes incoming traffic to the appropriate component in the environment. For example, the Router sends traffic to the Cloud Controller for management of applications in their lifecycle or a hosted application on a Diego Cell. The Router is informed of active application instances through the router-emitter that monitors status in the Diego Bulletin Board Service (BBS).</p>
+        	<p>The <strong> Diego Cell</strong>  hosts application instances, reports application status to the Diego Bulletin Board Service (BBS), and provides application logs, errors, and metrics to the Loggregator. Application instances live inside Garden containers. Containerization ensures that application instances run in isolation, get their fair share of resources, and are protected from noisy neighbors.</p>
+        	<p><img src="diegocell.png" alt="architecture"></p>
+        	<p>The <strong> Service broker </strong> advertises a catalog of service offerings and service plans to Bluemix and Cloud Foundry, and receives calls from Cloud Foundry for four functions: create, delete, bind, and unbind. The broker then passes these calls to the service itself.</p>
+        	</td>
+		</tr>
+		</table>
 	</div>
 	</div>
 	<div class="w3-container">
